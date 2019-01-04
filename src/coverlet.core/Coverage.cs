@@ -275,7 +275,7 @@ namespace Coverlet.Core
                 string key = sourceLinkDocument.Key;
                 if (Path.GetFileName(key) != "*") continue;
 
-                string relativePath = Path.GetRelativePath(Path.GetDirectoryName(key), Path.GetDirectoryName(document));
+                string relativePath = PathHelper.GetRelativePath(Path.GetDirectoryName(key), Path.GetDirectoryName(document));
 
                 if (relativePath.Contains("..")) continue;
 
