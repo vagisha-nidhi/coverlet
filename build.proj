@@ -30,6 +30,7 @@
   <Target Name="CreateNuGetPackage" AfterTargets="RunTests" Condition="$(Configuration) == 'Release'">
     <Exec Command="dotnet pack &quot;$(MSBuildThisFileDirectory)src\coverlet.msbuild.tasks\coverlet.msbuild.tasks.csproj&quot; -c $(Configuration) -o $(OutputPath)" />
     <Exec Command="dotnet pack &quot;$(MSBuildThisFileDirectory)src\coverlet.console\coverlet.console.csproj&quot; -c $(Configuration) -o $(OutputPath)" />
+    <Exec Command="dotnet pack &quot;$(MSBuildThisFileDirectory)src\coverlet.core\coverlet.core.csproj&quot; -c $(Configuration) -o $(OutputPath) -p:NuspecFile=&quot;$(MSBuildThisFileDirectory)src\coverlet.core\coverlet.core.nuspec" />
   </Target>
 
 </Project>

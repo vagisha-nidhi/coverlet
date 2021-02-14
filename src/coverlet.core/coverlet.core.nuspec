@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>coverlet.core</id>
+    <version>5.0.0</version>
+    <title>coverlet.core</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <authors>tonerdo</authors>
+    <owners>tonerdo</owners>
+    <description>
+    	Coverlet is a cross platform code coverage library for .NET Core, with support for line, branch and method coverage.
+   </description>
+    <projectUrl>http://github.com/tonerdo/coverlet</projectUrl>
+    <licenseUrl>https://github.com/tonerdo/coverlet/blob/master/LICENSE</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/tonerdo/coverlet/master/_assets/coverlet-icon.svg?sanitize=true</iconUrl>
+    <tags>coverage testing unit-test lcov opencover quality</tags>
+	<dependencies>
+	    <group targetFramework="netcoreapp1.0">
+			<dependency id="Mono.Cecil" version="0.10.1" />
+			<dependency id="Newtonsoft.Json" version="9.0.1" />
+			<dependency id="System.Reflection.Metadata" version="1.6.0" />
+			<dependency id="Microsoft.Extensions.FileSystemGlobbing" version="2.0.1" />
+	    </group>      
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\coverlet.core.dll" target="build\netstandard2.0\" />
+    <file src="coverlet.core.props" target="build\netstandard2.0\" />
+    <file src="bin\Release\netstandard2.0\coverlet.core.dll" target="lib\netstandard2.0\" />
+  </files>
+</package>
